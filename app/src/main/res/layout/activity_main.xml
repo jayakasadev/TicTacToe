@@ -11,123 +11,113 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="games.prac.kasa.connect4.MainActivity">
 
-    <GridLayout
+    <TableLayout
+        android:id="@+id/grid"
+        android:padding="0dip"
+        android:layout_margin="0dip"
         android:layout_width="match_parent"
-        android:layout_height="360dp"
-        android:columnCount="3"
-        android:rowCount="3"
+        android:layout_height="match_parent"
         android:background="@drawable/grid"
-        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="48dp">
+        android:layout_alignParentStart="true">
 
-        <ImageView
-            app:srcCompat="@drawable/red"
-            android:id="@+id/coin1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_column="0"
-            android:layout_row="0"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"/>
+        <TableRow
+            android:padding="0dip"
+            android:layout_margin="0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
 
-        <ImageView
-            app:srcCompat="@drawable/red"
-            android:id="@+id/coin2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_column="0"
-            android:layout_row="1"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/yellow"
+                android:id="@+id/coin1"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
 
-        <ImageView
-            app:srcCompat="@drawable/red"
-            android:id="@+id/coin3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_column="0"
-            android:layout_row="2"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/yellow"
+                android:id="@+id/coin2"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
 
-        <ImageView
-            app:srcCompat="@drawable/red"
-            android:id="@+id/coin4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_column="1"
-            android:layout_row="0"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/yellow"
+                android:id="@+id/coin3"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
+        </TableRow>
 
-        <ImageView
-            android:id="@+id/coin5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_column="1"
-            android:layout_row="1"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"
-            android:onClick="dropIn" />
+        <TableRow
+            android:padding="0dip"
+            android:layout_margin="0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
 
-        <ImageView
-            app:srcCompat="@drawable/red"
-            android:id="@+id/coin6"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_column="1"
-            android:layout_row="2"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/yellow"
+                android:id="@+id/coin4"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
 
-        <ImageView
-            app:srcCompat="@drawable/red"
-            android:id="@+id/coin7"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_column="2"
-            android:layout_row="0"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/yellow"
+                android:id="@+id/coin5"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
 
-        <ImageView
-            app:srcCompat="@drawable/red"
-            android:id="@+id/coin8"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_column="2"
-            android:layout_row="1"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/yellow"
+                android:id="@+id/coin6"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
+        </TableRow>
 
-        <ImageView
-            app:srcCompat="@drawable/red"
-            android:id="@+id/coin9"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_column="2"
-            android:layout_row="2"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp" />
-    </GridLayout>
+        <TableRow
+            android:padding="0dip"
+            android:layout_margin="0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/yellow"
+                android:id="@+id/coin7"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/yellow"
+                android:id="@+id/coin8"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/yellow"
+                android:id="@+id/coin9"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
+        </TableRow>
+
+    </TableLayout>
+
 </RelativeLayout>
