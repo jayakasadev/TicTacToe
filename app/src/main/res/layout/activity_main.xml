@@ -71,7 +71,6 @@
             android:layout_marginBottom="5dp"/>
 
         <ImageView
-            app:srcCompat="@drawable/red"
             android:id="@+id/coin5"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -80,7 +79,8 @@
             android:layout_marginLeft="12dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginBottom="5dp"
+            android:onClick="dropIn" />
 
         <ImageView
             app:srcCompat="@drawable/red"
