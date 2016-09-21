@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     //g.setAlpha(0);
                     g.animate().alpha(0).setDuration(750);
 
-                    //Someone won
+                    //fade the button in
                     LinearLayout linearLayout = (LinearLayout)findViewById(R.id.newGameLayout);
                     linearLayout.setVisibility(View.VISIBLE);
                     linearLayout.animate().alpha(1).setDuration(750);
@@ -79,6 +79,30 @@ public class MainActivity extends AppCompatActivity {
 
                     break;
                 }
+            }
+
+            int count = 0;
+
+            for(int a : gameState){
+                if(a == 2){
+                    count++;
+                }
+            }
+
+            if(count == 0){
+                //fade the game out of view
+                GridLayout g = (GridLayout)findViewById(R.id.grid);
+                //g.setAlpha(0);
+                g.animate().alpha(0).setDuration(750);
+
+                //fade the button in
+                LinearLayout linearLayout = (LinearLayout)findViewById(R.id.newGameLayout);
+                linearLayout.setVisibility(View.VISIBLE);
+                linearLayout.animate().alpha(1).setDuration(750);
+
+                //let player know who won
+                TextView text = (TextView)findViewById(R.id.winnerMessage);
+                text.setText("Draw");
             }
         }
     }
